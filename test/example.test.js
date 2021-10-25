@@ -1,18 +1,20 @@
-// IMPORT MODULES under test here:
-// import { example } from '../example.js';
+import { generateCharactor } from '../utilles.js';
 
 const test = QUnit.test;
+const skip = QUnit.skip;
 
-test('time to test a function', (expect) => {
-    //Arrange
-    // Set up your arguments and expectations
-    const expected = true;
+test('to see if generating a chareter creating an object', (expect) => {
     
-    //Act 
-    // Call the function you're testing and set the result to a const
-    const actual = true;
+    const playerAnt = { 
+        completed: {},
+        food: 0,
+        hp: 120,
+        name: "evan",
+        species: "bullet",
+    };
+    const expected = playerAnt;
+    const actual = generateCharactor('evan', 'bullet');
+    console.log(actual);
 
-    //Expect
-    // Make assertions about what is expected versus the actual result
-    expect.equal(actual, expected);
+    expect.deepEqual(actual, expected);
 });

@@ -1,8 +1,7 @@
-// import functions and grab DOM elements
+const submitButton = document.getElementById('pick-character');
 
-// initialize global state
 
-// set event listeners 
-  // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state
+submitButton.addEventListener('click', ()=>{
+    console.log('click');
+
+});
