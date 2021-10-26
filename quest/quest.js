@@ -4,7 +4,7 @@ import { quests } from '../data/data.js';
 import { findById } from '../utiles.js';
 
 const questTitle = document.getElementById('quest-title');
-// const questImg = document.getElementById('quest-image');
+const questImg = document.getElementById('quest-image');
 const questDescription = document.getElementById('quest-description');
 const questChoices = document.getElementById('quest-choices');
 
@@ -16,7 +16,7 @@ const questId = params.get('id');
 const currentQuest = findById(quests, questId);
 
 questTitle.textContent = currentQuest.title;
-//need to replace img later 
+questImg.src = currentQuest.image;
 questDescription.textContent = currentQuest.description;
 
 for (let choice of currentQuest.choices){
