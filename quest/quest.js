@@ -24,6 +24,7 @@ for (let choice of currentQuest.choices){
     radioButton.type = 'radio';
     radioButton.value = choice.id;
     radioButton.name = 'choice';
+    
 
     div.append(radioButton);
     questChoices.append(div);
@@ -31,8 +32,9 @@ for (let choice of currentQuest.choices){
 // console.log(currentQuest.choices);
 
 const mainForm = document.getElementById('choice-form');
+const selectButton = document.getElementById('select-option');
 const player = getPlayer();
-
+//using the form to update local storage
 mainForm.addEventListener('submit', (event)=> {
     event.preventDefault();
     const choiceForm = new FormData(mainForm);
@@ -43,4 +45,17 @@ mainForm.addEventListener('submit', (event)=> {
     player.hp += currentChoice.hp;
     //need to set compleated quests
     setPlayer(player);
+
+    const resultsContainer = document.createElement('div');
+    const returnButton = document.createElement('button');
+    returnButton.textContent = 'return to map';
+    returnButton.addEventListener('click', () => {
+        window.location.replace('../map/index.html');
+
+    });
+    resultsContainer.textContent = currentChoice.result;
+    questChoices.classList.add('hidden');
+    questDescription.classList.add('hidden');
+    selectButton.classList.add('hidden');
+    mainForm.append(resultsContainer, returnButton);
 });
