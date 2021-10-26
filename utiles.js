@@ -17,9 +17,19 @@ export function setPlayer(playerAnt){
     localStorage.setItem('PLAYER', stringyObj);
 }
 export function creatQuestLink(questId) {
+
     const anchorTag = document.createElement('a');
+    anchorTag.classList.add('quest');
     anchorTag.href = `../quest/?id=${questId.id}`;
     anchorTag.textContent = questId.title;
-
+    
     return anchorTag;
+}
+export function findById(array, id) {
+    for (let item of array) {
+        if (item.id === id) {
+            return item;
+        }
+    }
+    return null;
 }

@@ -1,239 +1,102 @@
-// export const quests = [{
-//     id: 'farris-wheel',
-//     title: 'At the foot of the farris wheel',
-//     image: ' ', 
-//     description:`you travel aimlessly to the foot of the farris wheel
-//     where you find what you think is a dead cricket`,
-//     choices: [{
-//         id:'grab-a-leg',
-//         description:'grab a leg in hopes to bring it back home to the queen', 
-//         result:`the cricket jumps up suprised as thier leg gets ripped off and 
-//         then proceeds to kick you with thier hind legs.
-//         You loose 40 health points and gain minimal amouts of food.`, 
-//         hp: -40, 
-//         food: 1, 
-//     }, {
-//         id:'approch with caution', 
-//         description:`approce with caution and see if you can get a better look`, 
-//         result:`you approch with the up most caution, but as you get about 3 inches from your potential haul
-//          2 crickets jump out from behind a old hotdog plate and take a huge bite out of your leg. you take 30 damage`, 
-//         hp:-30,
-//         food:0,
-//     }, {
-//         id:'turn-around', 
-//         description:`turn around and ignore a potential food source, 
-//         ou are worried that the queen will punsih you if anyone found out.`, 
-//         result: `you turn around and start walking the other way. 
-//         As you do you find a small grain of corn that you decided to bring back to the queen.
-//         Its not much but its honest work`, 
-//         hp:-30,
-//         food:0,
-//     }],
-// }, {
-//     id: 'farris-wheel',
-//     title: 'At the foot of the farris wheel',
-//     image: ' ', 
-//     description:`you travel aimlessly to the foot of the farris wheel
-//     where you find what you think is a dead cricket`,
-//     choices: [{
-//         id:'grab-a-leg',
-//         description:'grab a leg in hopes to bring it back home to the queen', 
-//         result:`the cricket jumps up suprised as thier leg gets ripped off and 
-//         then proceeds to kick you with thier hind legs.
-//         You loose 40 health points and gain minimal amouts of food.`, 
-//         hp: -40, 
-//         food: 1, 
-//     }, {
-//         id:'approch with caution', 
-//         description:`approce with caution and see if you can get a better look`, 
-//         result:`you approch with the up most caution, but as you get about 3 inches from your potential haul
-//          2 crickets jump out from behind a old hotdog plate and take a huge bite out of your leg. you take 30 damage`, 
-//         hp:-30,
-//         food:0,
-//     }, {
-//         id:'turn-around', 
-//         description:`turn around and ignore a potential food source, 
-//         ou are worried that the queen will punsih you if anyone found out.`, 
-//         result: `you turn around and start walking the other way. 
-//         As you do you find a small grain of corn that you decided to bring back to the queen.
-//         Its not much but its honest work`, 
-//         hp:-30,
-//         food:0,
-//     }],
-// }, {
-//     id: 'farris-wheel',
-//     title: 'At the foot of the farris wheel',
-//     image: ' ', 
-//     description:`you travel aimlessly to the foot of the farris wheel
-//     where you find what you think is a dead cricket`,
-//     choices: [{
-//         id:'grab-a-leg',
-//         description:'grab a leg in hopes to bring it back home to the queen', 
-//         result:`the cricket jumps up suprised as thier leg gets ripped off and 
-//         then proceeds to kick you with thier hind legs.
-//         You loose 40 health points and gain minimal amouts of food.`, 
-//         hp: -40, 
-//         food: 1, 
-//     }, {
-//         id:'approch with caution', 
-//         description:`approce with caution and see if you can get a better look`, 
-//         result:`you approch with the up most caution, but as you get about 3 inches from your potential haul
-//          2 crickets jump out from behind a old hotdog plate and take a huge bite out of your leg. you take 30 damage`, 
-//         hp:-30,
-//         food:0,
-//     }, {
-//         id:'turn-around', 
-//         description:`turn around and ignore a potential food source, 
-//         ou are worried that the queen will punsih you if anyone found out.`, 
-//         result: `you turn around and start walking the other way. 
-//         As you do you find a small grain of corn that you decided to bring back to the queen.
-//         Its not much but its honest work`, 
-//         hp:-30,
-//         food:0,
-//     }],
-// }];
-
-const monsters = {
-    id: 'monsters',
-    title: 'A Den of Monsters',
-    map: {
-        top: '89%',
-        left: '44%'
-    },
-    image: 'monsters.jpg',
-    description: `
-        You enter the quest chamber only to be confronted by a hoard of
-        monsters. And they look hungry. What do you do?
-    `,
+const farrisWheel = {
+    id: 'farris-wheel',
+    title: 'The farris wheel',
+    image: '../assets/farris-wheel.jpeg', 
+    description:`you travel aimlessly to the foot of the farris wheel
+    where you find what you think is a dead cricket`,
     choices: [{
-        id: 'negotiate',
-        description: 'Negotiate with them',
-        result: `
-            Knowing the monsters are not too bright, you offer to go buy them all
-            turkey dinners from the village pub. They give you 35 gold for meals
-            that will never be delivered. I hope you can live with yourself. 
-        `,
-        hp: 0,
-        gold: 35
+        id:'grab-a-leg',
+        description:'grab a leg in hopes to bring it back home to the queen', 
+        result:`the cricket jumps up suprised as thier leg gets ripped off and 
+        then proceeds to kick you with thier hind legs.
+        You loose 40 health points and gain minimal amouts of food.`, 
+        hp: -40, 
+        food: 1, 
     }, {
-        id: 'fight',
-        description: 'Fiiiiiggghhhttt!',
-        result: `
-            Brandishing your sword you let out a warrior's cry and charge into the monsters
-            hacking and slashing. Before long you stand panting gazing across the bodies of
-            your vanquished foes. The bad news is you take 30 hp damage. The good news is you
-            find 50 gold.
-        `,
-        hp: -30,
-        gold: 50
+        id:'approch with caution', 
+        description:`approce with caution and see if you can get a better look`, 
+        result:`you approch with the up most caution, but as you get about 3 inches from your potential haul
+         2 crickets jump out from behind a old hotdog plate and take a huge bite out of your leg. you take 30 damage`, 
+        hp:-30,
+        food:0,
     }, {
-        id: 'run',
-        description: 'Run away like good Sir Robin',
-        result: `
-            As you make a dash for the door a giant spider descends and take a bite of flesh,
-            causing 50 hp damage.
-        `,
-        hp: -50,
-        gold: 0
-    }]
+        id:'turn-around', 
+        description:`turn around and ignore a potential food source, 
+        you are worried that the queen will punsih you if anyone found out.`, 
+        result: `you turn around and start walking the other way. 
+        As you do you find a small grain of corn that you decided to bring back to the queen.
+        Its not much but its honest work`, 
+        hp:0,
+        food:5,
+    }],
+};
+const hotdogStand = {
+    id: 'hot-dog-stand',
+    title: 'Hot Dog Stand',
+    image: '../assets/food-stand.jpeg', 
+    description:`as you go looking for food to please your queen, a robust smell of the hotdog-stand whiffs by. 
+    you travel towords the smell as you find your self head to head with a massive half-dollor size piece of a hot-dog`,
+    choices: [{
+        id:'call-for-backup',
+        description:'Leave it for now and go back to the ant hill and call for backup', 
+        result:`you go back seeking help from others but no of them take you suriously as they have never see
+        a piece of dog so big. you finnaly bring a small group of them in hopes to prove them wrong, but by the time you get there a rat has seem to 
+        run off with your catch, the other ants are pissed and beat the crap out of you`, 
+        hp: -20, 
+        food: 0, 
+    }, {
+        id:'eat as much as you can.', 
+        description:`eat as much as you can`, 
+        result:`you start to eat the piece of hot dawg, you gain 20 health points`, 
+        hp:20,
+        food:0,
+    }, {
+        id:'bring-it-back', 
+        description:`Try and bring the haul back by your self`, 
+        result: `you kick and push but nothing seems to budge, as you are working tirelessly, another fellow ant jumps in to help you out, and then another, and another.
+        things start to move at a good pace but a gaint child with a maginifiying glass starts cooking the earth snf commrads around you. 
+        you make it back with about 1/10 of the original size of meat and more then half your siblings gone`, 
+        hp:-10,
+        food:10,
+    }],
+};
+const emptyCups = {
+    id: '3-empty-cups',
+    title: '3 Empty Cups',
+    image: '../assets/another-spot.jpeg', 
+    description:`you find 3 cups (soda-cup, coffee, and solo-cup ) all upside down, 
+    there is a small gap where you can squuze into each one.`,
+    choices: [{
+        id:'cola-cup',
+        description:'Crawl into the soda cup ', 
+        result:`you go into the soda cup, but as soon as you do,
+         some one picks up the cup and throws it away.you get nothing`, 
+        hp:0, 
+        food: 0, 
+    }, {
+        id:'coffee-cup.', 
+        description:`Crawl into the coffee cup`, 
+        result:`you get into the coffee cup and as you do you start to feel funny and speedy.
+         you wake up the next day with pleanty of food, 
+         
+         but have no idea how you got it home`, 
+        hp:0,
+        food:30,
+    }, {
+        id:'solo-cup', 
+        description:`Crawl into the solo cup`, 
+        result: `you get into the solo cup and soon after start to feel funny,
+         you find your self the next morrning in the food storage 
+         of your queens castle, which seem like you broke in and ate her food.
+          you also have a killer hang over`, 
+        hp:-20,
+        food:-20,
+    }],
 };
 
-const dragon = {
-    id: 'dragon',
-    title: 'A HAIRY!!! Dragon',
-    map: {
-        top: '17%',
-        left: '37%'
-    },
-    image: 'dragon.jpg',
-    audio: 'dragon.wav',
-    action: 'dragon-growl.aiff',
-    description: `
-        You run to a nearby village you have heard is being
-        terrorized by a dragon. Sure enough as you rent a room
-        in a local inn, you go outside and see the dragon about
-        to lay seige! What do you do?
-    `,
-    choices: [{
-        id: 'run',
-        description: 'Get the hell out of the village',
-        result: `
-            You high tail it in the opposite direction. Luckily,
-            in the panic you find a bag on the ground with 15 gold.
-            Unluckily, you trip over a discarded wagon wheel on your
-            way out of town and take 40 hp damage. 
-        `,
-        hp: -35,
-        gold: 15
-    }, {
-        id: 'fight',
-        description: 'Fiiiiiggghhhttt!',
-        result: `
-            You attempt to charge towards the dragon, who sees you approach
-            and let's loose a fireball. You wake up the next morning and the
-            village has been completely burned to the ground.
-            Oh, and you take 45 hp damage.
-        `,
-        hp: -45,
-        gold: 0
-    }, {
-        id: 'archer',
-        description: 'Emulate that guy from LOR who shot an arrow',
-        result: `
-            Inspired by the legend of Bard the Bowman, you notice a
-            stunned archer standing nearby and take their bow and quiver,
-            climb to the top of a tall tower and take aim. On the dragon's
-            next pass you steady your aim and let one fly. Amazingly,
-            you strike the dragon in the eye, piercing into the brain and
-            killing the dragon instantly. The villagers declare you their hero
-            and award you 90 gold.
-        `,
-        hp: 0,
-        gold: 90
-    }]
-};
-
-const treasure = {
-    id: 'treasure',
-    title: 'A Golden Treasure',
-    map: {
-        top: '31%',
-        left: '5%'
-    },
-    prerequisites: ['dragon', 'monsters'],
-    image: 'treasure-chests.png',
-    audio: 'treasure-chests.wav',
-    action: 'chest-opening.wav',
-    description: `
-        As you enter the quest chamber you notice three chests before you.
-        Just as you start to imagine the wealth, you see a giant serpent
-        emerge from the back of the chamber. You'll need to make a run for it,
-        but you have time to open one chest before you take off. Which one 
-        do you choose?
-    `,
-    choices: [{
-        id: 'wooden',
-        description: 'A Wooden Chest',
-        result: 'You grab 40 gold pieces!',
-        hp: 0,
-        gold: 40
-    }, {
-        id: 'golden',
-        description: 'A Golden Chest',
-        result: 'Oh no! The chest is booby trapped with poison and you take 50 hp damage',
-        hp: -50,
-        gold: 0
-    }, {
-        id: 'jeweled',
-        description: 'A Jeweled Chest',
-        result: 'A warm light engulfs you and you gain 35 hp',
-        hp: 35,
-        gold: 0
-    }]
-};
 
 export const quests = [
-    monsters, 
-    treasure,
-    dragon,
+    emptyCups,
+    hotdogStand,
+    farrisWheel
 ];
