@@ -16,3 +16,10 @@ export function setPlayer(playerAnt){
     const stringyObj = JSON.stringify(playerAnt);
     localStorage.setItem('PLAYER', stringyObj);
 }
+export function creatQuestLink(questId) {
+    const anchorTag = document.createElement('a');
+    anchorTag.href = `../quest/?id=${questId.id}`;
+    anchorTag.textContent = questId.title;
+
+    return anchorTag;
+}
