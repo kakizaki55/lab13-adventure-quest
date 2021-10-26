@@ -1,7 +1,7 @@
 
 
 import { quests } from '../data/data.js';
-import { findById, getPlayer } from '../utiles.js';
+import { findById, getPlayer, setPlayer } from '../utiles.js';
 
 const questTitle = document.getElementById('quest-title');
 const questImg = document.getElementById('quest-image');
@@ -39,10 +39,8 @@ mainForm.addEventListener('submit', (event)=> {
     const choiceId = choiceForm.get('choice');
     const currentChoice = findById(currentQuest.choices, choiceId);
     console.log(currentChoice);
-
-    
-
-
-
-
+    player.food += currentChoice.food;
+    player.hp += currentChoice.hp;
+    //need to set compleated quests
+    setPlayer(player);
 });
