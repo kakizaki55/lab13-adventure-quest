@@ -1,18 +1,29 @@
-// IMPORT MODULES under test here:
-// import { example } from '../example.js';
+import { generateCharactor, setPlayer, getPlayer } from '../utiles.js';
 
 const test = QUnit.test;
+test('to see if generating a chareter creating an object', (expect) => {
+    const playerAnt = { 
+        completed: {},
+        food: 0,
+        hp: 120,
+        name: 'evan',
+        species: 'bullet',
+    };
+    const expected = playerAnt;
+    const actual = generateCharactor('evan', 'bullet');
 
-test('time to test a function', (expect) => {
-    //Arrange
-    // Set up your arguments and expectations
-    const expected = true;
-    
-    //Act 
-    // Call the function you're testing and set the result to a const
-    const actual = true;
-
-    //Expect
-    // Make assertions about what is expected versus the actual result
-    expect.equal(actual, expected);
+    expect.deepEqual(actual, expected);
+});
+test('to see if the local saving in local storgae is working well', (expect) => {
+    const playerAnt = { 
+        completed: {},
+        food: 0,
+        hp: 120,
+        name: 'evan',
+        species: 'bullet',
+    };
+    const expected = playerAnt;
+    setPlayer(playerAnt);
+    const actual = getPlayer();
+    expect.deepEqual(actual, expected);
 });
