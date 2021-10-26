@@ -1,14 +1,12 @@
-// console.log('your on the quest page!');
+
 
 import { quests } from '../data/data.js';
-import { findById } from '../utiles.js';
+import { findById, getPlayer } from '../utiles.js';
 
 const questTitle = document.getElementById('quest-title');
 const questImg = document.getElementById('quest-image');
 const questDescription = document.getElementById('quest-description');
 const questChoices = document.getElementById('quest-choices');
-
-
 
 const params = new URLSearchParams(window.location.search);
 const questId = params.get('id');
@@ -30,4 +28,21 @@ for (let choice of currentQuest.choices){
     div.append(radioButton);
     questChoices.append(div);
 }
+// console.log(currentQuest.choices);
 
+const mainForm = document.getElementById('choice-form');
+const player = getPlayer();
+
+mainForm.addEventListener('submit', (event)=> {
+    event.preventDefault();
+    const choiceForm = new FormData(mainForm);
+    const choiceId = choiceForm.get('choice');
+    const currentChoice = findById(currentQuest.choices, choiceId);
+    console.log(currentChoice);
+
+    
+
+
+
+
+});
