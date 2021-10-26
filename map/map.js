@@ -5,8 +5,7 @@ const mapElement = document.getElementById('map-links');
 
 
 for (let quest of quests) {
-    console.log(quest.id);
-    
+
     const questLink = creatQuestLink(quest);
 
     mapElement.append(questLink);
