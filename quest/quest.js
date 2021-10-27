@@ -25,7 +25,6 @@ for (let choice of currentQuest.choices){
     radioButton.value = choice.id;
     radioButton.name = 'choice';
     
-
     div.append(radioButton);
     questChoices.append(div);
 }
@@ -43,6 +42,8 @@ mainForm.addEventListener('submit', (event)=> {
     console.log(currentChoice);
     player.food += currentChoice.food;
     player.hp += currentChoice.hp;
+    player.completed[currentQuest.id] = true;
+
     //need to set compleated quests
     setPlayer(player);
 
@@ -58,4 +59,5 @@ mainForm.addEventListener('submit', (event)=> {
     questDescription.classList.add('hidden');
     selectButton.classList.add('hidden');
     mainForm.append(resultsContainer, returnButton);
+
 });
