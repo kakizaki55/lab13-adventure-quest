@@ -26,6 +26,9 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-image:url('../assets/ant-crawling.gif');
+    background-color: rosybrown;
+    
 }
 main{
     display: flex;
@@ -34,4 +37,18 @@ main{
 }
 img{
     width: 200px;
+    border:black solid 5px;
+    border-radius: 60%;
+}
+input[name="character-class"]{
+    display: none;
+}
+input[type=radio]:checked + img{
+    border: springgreen solid 5px;
+}
+
+
+label{
+    display: flex;
+    justify-content: center;
 }
