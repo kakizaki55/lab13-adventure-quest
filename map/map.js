@@ -27,3 +27,4 @@ function checkQuests(player){
     }
     return true;
 }
+function 

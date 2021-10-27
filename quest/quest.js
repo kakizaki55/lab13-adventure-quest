@@ -41,8 +41,7 @@ mainForm.addEventListener('submit', (event)=> {
     const currentChoice = findById(currentQuest.choices, choiceId);
     console.log(currentChoice);
     player.food += currentChoice.food;
-    player.hp += currentChoice.hp;
-    player.completed[currentQuest.id] = true;
+    player.hp += currentChoice.hp;player.completed[currentQuest.id] = true;
 
     //need to set compleated quests
     setPlayer(player);
