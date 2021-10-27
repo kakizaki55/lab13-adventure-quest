@@ -28,8 +28,14 @@ for (let choice of currentQuest.choices){
     div.append(radioButton);
     questChoices.append(div);
 }
-// console.log(currentQuest.choices);
+const resultsContainer = document.createElement('div');
+const returnButton = document.createElement('button');
+returnButton.onclick = () =>{
+    window.location.replace('../map/index.html');
+};
+returnButton.textContent = 'return to map';
 
+const main = document.querySelector('main');
 const mainForm = document.getElementById('choice-form');
 const selectButton = document.getElementById('select-option');
 const player = getPlayer();
@@ -41,22 +47,17 @@ mainForm.addEventListener('submit', (event)=> {
     const currentChoice = findById(currentQuest.choices, choiceId);
     
     player.food += currentChoice.food;
-    player.hp += currentChoice.hp;player.completed[currentQuest.id] = true;
+    player.hp += currentChoice.hp;
+    player.completed[currentQuest.id] = true;
 
     //need to set compleated quests
     setPlayer(player);
 
-    const resultsContainer = document.createElement('div');
-    const returnButton = document.createElement('button');
-    returnButton.textContent = 'return to map';
-    returnButton.addEventListener('click', () => {
-        window.location.replace('../map/index.html');
-
-    });
     resultsContainer.textContent = currentChoice.result;
     questChoices.classList.add('hidden');
     questDescription.classList.add('hidden');
     selectButton.classList.add('hidden');
-    mainForm.append(resultsContainer, returnButton);
 
+    main.append(resultsContainer, returnButton);
+    
 });
