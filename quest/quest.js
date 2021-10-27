@@ -39,7 +39,7 @@ mainForm.addEventListener('submit', (event)=> {
     const choiceForm = new FormData(mainForm);
     const choiceId = choiceForm.get('choice');
     const currentChoice = findById(currentQuest.choices, choiceId);
-    console.log(currentChoice);
+    
     player.food += currentChoice.food;
     player.hp += currentChoice.hp;player.completed[currentQuest.id] = true;
 
