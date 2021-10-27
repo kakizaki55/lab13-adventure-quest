@@ -4,6 +4,11 @@ import { creatQuestLink, getPlayer } from '../utiles.js';
 const mapElement = document.getElementById('map-links');
 const player = getPlayer();
 
+if (player.hp <= 0){
+    window.location.replace('../endgame/index.html');
+}
+
+
 
 for (let quest of quests) {
     if (player.completed[quest.id]){
@@ -19,5 +24,3 @@ function createSpan(quest){
     mapElement.appendChild(span);
 
 }
-
-
