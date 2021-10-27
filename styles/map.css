@@ -31,7 +31,24 @@ img{
     position: relative;
     
 }
-.quest{
+body{
+    
+}
+
+.classfarris-wheel{
     position: absolute;
+    top: 320px;
+    left: 360px;
+    
+}
+.class3-empty-cups{
+    position: absolute;
+    top: 500px;
+    left: 680px;
+}
+.classhot-dog-stand{
+    position: absolute;
+    top: 600px;
+    left: 450px;
 }
 
