@@ -4,7 +4,8 @@ import { quests } from '../data/data.js';
 import { findById, getPlayer, setPlayer } from '../utiles.js';
 
 const questTitle = document.getElementById('quest-title');
-const questImg = document.getElementById('quest-image');
+const questImg1 = document.getElementById('quest-image1');
+const questImg2 = document.getElementById('quest-image2');
 const questDescription = document.getElementById('quest-description');
 const questChoices = document.getElementById('quest-choices');
 
@@ -14,7 +15,8 @@ const questId = params.get('id');
 const currentQuest = findById(quests, questId);
 
 questTitle.textContent = currentQuest.title;
-questImg.src = currentQuest.image;
+questImg1.src = currentQuest.image;
+questImg2.src = currentQuest.image;
 questDescription.textContent = currentQuest.description;
 
 for (let choice of currentQuest.choices){

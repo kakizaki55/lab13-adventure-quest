@@ -17,6 +17,13 @@
 span{
     margin: 10px;
     border: black solid 2px;
+    
+}
+div{
+    border: black solid 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 img{
     width: 60px;
@@ -32,7 +39,7 @@ img{
     
 }
 body{
-    
+    font-style: bold;
 }
 
 .classfarris-wheel{
@@ -51,4 +58,7 @@ body{
     top: 600px;
     left: 450px;
 }
+#eye-site img{
+    width: 250px;
 
+}

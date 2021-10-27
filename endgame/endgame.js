@@ -1,4 +1,4 @@
-console.log('endgame');
+
 import { getPlayer, displayPlayerStatus } from '../utiles.js';
 
 const playerStatusContainer = document.getElementById('player-status');

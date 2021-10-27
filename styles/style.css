@@ -16,7 +16,7 @@ main{
 img{
     width: 200px;
     border:black solid 5px;
-    border-radius: 60%;
+    border-radius: 50%;
 }
 input[name="character-class"]{
     display: none;
@@ -29,4 +29,8 @@ input[type=radio]:checked + img{
 label{
     display: flex;
     justify-content: center;
+}
+form{
+    display: flex;
+    text-align: center;
 }
