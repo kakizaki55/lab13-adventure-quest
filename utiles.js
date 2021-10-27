@@ -23,6 +23,7 @@ export function creatQuestLink(questId) {
     anchorTag.href = `../quest/?id=${questId.id}`;
     anchorTag.textContent = questId.title;
     anchorTag.classList.add(`class${questId.id}`);
+    anchorTag.style.background = 'white';
     
     return anchorTag;
 }
