@@ -33,3 +33,20 @@ export function findById(array, id) {
     }
     return null;
 }
+export function displayPlayerStatus(header){
+
+    const playerStatus = getPlayer();
+
+    const name = document.createElement('span');
+    name.textContent = playerStatus.name;
+    const hp = document.createElement('span');
+    hp.textContent = playerStatus.hp;
+    const food = document.createElement('span');
+    food.textContent = playerStatus.food;
+    const img = document.createElement('img');
+    img.src = `../assets/${playerStatus.species}.jpeg`;
+    const div = document.createElement('div');
+    
+    div.append(name, hp, food, img,);
+    header.append(div);
+}

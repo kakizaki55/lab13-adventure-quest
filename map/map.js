@@ -1,5 +1,5 @@
 import { quests } from '../data/data.js';
-import { creatQuestLink, getPlayer } from '../utiles.js';
+import { creatQuestLink, getPlayer, displayPlayerStatus } from '../utiles.js';
 
 const mapElement = document.getElementById('map-links');
 const playerStatusContainer = document.getElementById('player-status');
@@ -28,23 +28,6 @@ function checkQuests(player){
         }
     }
     return true;
-}
-function displayPlayerStatus(header){
-
-    const playerStatus = getPlayer();
-    console.log(playerStatus);
-
-    const name = document.createElement('span');
-    name.textContent = playerStatus.name;
-    const hp = document.createElement('span');
-    hp.textContent = playerStatus.hp;
-    const food = document.createElement('span');
-    food.textContent = playerStatus.food;
-    const img = document.createElement('img');
-    img.src = `../assets/${playerStatus.species}.jpeg`;
-    const div = document.createElement('div');
-    div.append(name, hp, food, img,);
-    header.append(div);
 }
 
 displayPlayerStatus(playerStatusContainer);
