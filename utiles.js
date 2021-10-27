@@ -22,6 +22,7 @@ export function creatQuestLink(questId) {
     anchorTag.classList.add('quest');
     anchorTag.href = `../quest/?id=${questId.id}`;
     anchorTag.textContent = questId.title;
+    anchorTag.classList.add(`class${questId.id}`);
     
     return anchorTag;
 }
@@ -36,10 +37,12 @@ export function findById(array, id) {
 export function displayPlayerStatus(header){
 
     const playerStatus = getPlayer();
-    console.log(playerStatus);
 
+    const nameLable = document.createElement('lable');
     const name = document.createElement('span');
     name.textContent = playerStatus.name;
+    nameLable.textContent = 'Name:';
+    nameLable.append(name);
 
     const hpLable = document.createElement('lable');
     const hp = document.createElement('span');
@@ -55,8 +58,19 @@ export function displayPlayerStatus(header){
 
     const img = document.createElement('img');
     img.src = `../assets/${playerStatus.species}.jpeg`;
+
     const div = document.createElement('div');
 
-    div.append(name, hpLable, foodLable, img,);
+    div.append(nameLable, hpLable, foodLable, img,);
     header.append(div);
 }
+const mapElement = document.getElementById('map-links');
+export function createSpan(quest){
+    const span = document.createElement('span');
+    span.textContent = `${quest.title}`;
+    mapElement.appendChild(span);
+    span.classList.add(`class${quest.id}`);
+    
+}
+
+

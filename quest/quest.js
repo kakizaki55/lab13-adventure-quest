@@ -54,6 +54,7 @@ mainForm.addEventListener('submit', (event)=> {
     setPlayer(player);
 
     resultsContainer.textContent = currentChoice.result;
+    resultsContainer.classList.add('results-container');
     questChoices.classList.add('hidden');
     questDescription.classList.add('hidden');
     selectButton.classList.add('hidden');

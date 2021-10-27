@@ -1,5 +1,5 @@
 import { quests } from '../data/data.js';
-import { creatQuestLink, getPlayer, displayPlayerStatus } from '../utiles.js';
+import { creatQuestLink, getPlayer, displayPlayerStatus, createSpan } from '../utiles.js';
 
 const mapElement = document.getElementById('map-links');
 const playerStatusContainer = document.getElementById('player-status');
@@ -16,11 +16,7 @@ for (let quest of quests) {
         mapElement.append(questLink);
     }
 }
-function createSpan(quest){
-    const span = document.createElement('span');
-    span.textContent = `${quest.title}`;
-    mapElement.appendChild(span);
-}
+
 function checkQuests(player){
     for (let quest of quests){
         if (!player.completed[quest.id]){
