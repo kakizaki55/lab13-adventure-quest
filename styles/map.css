@@ -1,3 +1,64 @@
 #map{
     width: 900px;
 }
+.hidden{
+    display: none;
+}
+#player-status{
+    font-size: 1rem;
+    
+}
+#results-container{
+    width: 300px;
+}
+.results-container{
+    width: 300px;
+}
+span{
+    margin: 10px;
+    border: black solid 2px;
+    
+}
+div{
+    border: black solid 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+img{
+    width: 60px;
+}
+#quest-description{
+    width: 300px;
+}
+#map-links{
+    background-image: url('../assets/amusment-park.jpeg');
+    height: 700px;
+    width: 1000px;
+    position: relative;
+    
+}
+body{
+    font-style: bold;
+}
+
+.classfarris-wheel{
+    position: absolute;
+    top: 320px;
+    left: 360px;
+    
+}
+.class3-empty-cups{
+    position: absolute;
+    top: 500px;
+    left: 680px;
+}
+.classhot-dog-stand{
+    position: absolute;
+    top: 600px;
+    left: 450px;
+}
+#eye-site img{
+    width: 250px;
+
+}
